@@ -11,4 +11,8 @@ node('php') {
                  userRemoteConfigs: [[url: 'https://github.com/Yaaqoub/devops-eval-01.git']]]
         )
     }
+
+    stage('Create Docker Compose Imgage') {
+        sh "docker-compose up"
+    }
 }
